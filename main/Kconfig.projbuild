@@ -1,0 +1,24 @@
+menu "Display configuration"
+    orsource "$IDF_PATH/components/soc/esp32/include/soc/Kconfig.soc_caps.in"
+
+    config LCD_SPI_MOSI_PIN
+        int "SPI MOSI pin number"
+        range 0 SOC_GPIO_OUT_RANGE_MAX
+        default 25
+    
+    config LCD_SPI_SCK_PIN
+        int "SPI SCK pin number"
+        range 0 SOC_GPIO_OUT_RANGE_MAX
+        default 26
+
+    config LCD_SPI_CS_PIN
+        int "SPI CS pin number"
+        range 0 SOC_GPIO_OUT_RANGE_MAX
+        default 27
+
+    config LCD_GPIO_RESET_PIN
+        int "LCD RST pin number"
+        range 0 SOC_GPIO_OUT_RANGE_MAX
+        default 14
+endmenu
+
