@@ -1,0 +1,25 @@
+---
+BasedOnStyle: LLVM
+AlignEscapedNewlines: Left
+BreakBeforeBraces: Mozilla
+ColumnLimit: '120'
+IncludeBlocks: Regroup
+SortIncludes: 'true'
+IndentCaseLabels: 'true'
+TabWidth: 4
+IndentWidth: 4
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AlignAfterOpenBracket: false
+
+BinPackParameters: true
+BinPackArguments: true
+
+IncludeCategories:
+    - Regex: '^(<|")(esp_|driver/|freertos/|hal/|soc/).*'
+      Priority: 1
+    - Regex: '^(<|")sdkconfig.h'
+    - Regex: '^<.*'
+      Priority: 10
+    - Regex: '^".*'
+      Priority: 11

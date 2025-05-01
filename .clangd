@@ -1,0 +1,3 @@
+CompileFlags:
+  Add: -Wno-unknown-warning-option
+  Remove: [-fno-shrink-wrap, -fstrict-volatile-bitfields, -fno-tree-switch-conversion]
