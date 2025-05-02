@@ -1,3 +1,14 @@
+/*
+    Newclock
+    u8g2_adapter/u8g2_d_st7920_esp32.h
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    Original design from u8g2 library by olikraus@gmail.com in sys/tga/common/u8x8_d_tga.c.
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #pragma once
 
 #include "u8g2.h"

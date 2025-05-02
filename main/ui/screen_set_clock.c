@@ -1,3 +1,12 @@
+/*
+    Newclock
+    ui/screen_set_clock.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <driver/ledc.h>
 #include <esp_log.h>
 
@@ -9,9 +18,8 @@
 #include <u8g2.h>
 
 #include "button_handling.h"
-#include "portmacro.h"
-#include "ui.h"
 #include "ui/buttons.h"
+#include "ui/ui.h"
 #include "utils/utils.h"
 
 static const char *TAG = "ui_brightness";

@@ -1,17 +1,22 @@
+/*
+    Newclock
+    ui/config_screen.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <esp_log.h>
 
-#include <stdint.h>
 #include <u8g2.h>
 
 #include "button_handling.h"
 #include "portmacro.h"
 #include "ui.h"
 #include "ui/buttons.h"
-#include "ui/progress_bar.h"
 
 static const char *TAG = "ui_config";
-
-static uint16_t g_bar_value = 10;
 
 static struct ui_screen_t *g_next_ui_screen = &ui_main_screen;
 
@@ -106,8 +111,7 @@ enum ui_state_t ui_config_screen_process_events(void)
                 case BTN_2: g_next_ui_screen = &ui_set_clock_screen; break;
                 case BTN_3: g_next_ui_screen = &ui_brightness_screen; break;
                 case BTN_5: g_next_ui_screen = &ui_main_screen; break;
-                default:
-                    return UI_STATE_REDRAW;
+                default: return UI_STATE_REDRAW;
             }
 
             ret = UI_STATE_DEINIT_SCREEN;

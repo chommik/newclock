@@ -1,3 +1,12 @@
+/*
+    Newclock
+    ui/screen_set_date.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <driver/ledc.h>
 #include <esp_log.h>
 
@@ -9,7 +18,6 @@
 #include <u8g2.h>
 
 #include "button_handling.h"
-#include "portmacro.h"
 #include "ui.h"
 #include "ui/buttons.h"
 
@@ -126,7 +134,6 @@ enum ui_state_t ui_set_date_draw(u8g2_t *u8g2)
 
     u8g2_DrawHLine(u8g2, 0, 11, 128);
 
-    uint16_t block_width = 0;
     uint16_t current_x = 16;
 
     // ----- day
@@ -250,26 +257,16 @@ enum ui_state_t ui_set_date_process_events(void)
 
             int8_t offset_dir = 0;
             switch (event.btn_id) {
-                case BTN_1:
-                    offset_dir = -1;
-                    break;
-                case BTN_2:
-                    offset_dir = 1;
-                    break;
+                case BTN_1: offset_dir = -1; break;
+                case BTN_2: offset_dir = 1; break;
                 default: break;
             }
 
             switch (current_state) {
                 case SCREEN_STATE_MAIN: // impossible
-                case SCREEN_STATE_SET_DAY:
-                    tm_now.tm_mday += offset_dir;
-                    break;
-                case SCREEN_STATE_SET_MONTH:
-                    tm_now.tm_mon += offset_dir;
-                    break;
-                case SCREEN_STATE_SET_YEAR:
-                    tm_now.tm_year += offset_dir;
-                    break;
+                case SCREEN_STATE_SET_DAY: tm_now.tm_mday += offset_dir; break;
+                case SCREEN_STATE_SET_MONTH: tm_now.tm_mon += offset_dir; break;
+                case SCREEN_STATE_SET_YEAR: tm_now.tm_year += offset_dir; break;
             }
 
             time_t new_time = mktime(&tm_now);
@@ -280,7 +277,7 @@ enum ui_state_t ui_set_date_process_events(void)
 
             goto no_more_states;
         }
-        no_more_states:
+    no_more_states:
     }
 
     return ret;

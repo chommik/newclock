@@ -1,3 +1,12 @@
+/*
+    Newclock
+    tasks/task_brightness.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include "task_brightness.h"
 
 #include "esp_err.h"

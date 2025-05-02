@@ -1,3 +1,12 @@
+/*
+    Newclock
+    tasks/temperature.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include "ds18x20.h"
 #include "esp_err.h"
 #include "esp_log.h"

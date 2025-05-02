@@ -1,4 +1,12 @@
-#include "freertos/idf_additions.h"
+/*
+    Newclock
+    ui/screen_brightness.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <driver/ledc.h>
 #include <esp_log.h>
 
@@ -7,9 +15,8 @@
 #include <u8g2.h>
 
 #include "button_handling.h"
-#include "portmacro.h"
-#include "task_brightness.h"
-#include "ui.h"
+#include "tasks/task_brightness.h"
+#include "ui/ui.h"
 #include "ui/buttons.h"
 #include "ui/progress_bar.h"
 

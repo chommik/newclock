@@ -1,8 +1,16 @@
+/*
+    Newclock
+    ui/buttons.h
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #pragma once
 
 #include <stdint.h>
 
-#include "button_handling.h"
 #include "u8g2.h"
 
 typedef enum

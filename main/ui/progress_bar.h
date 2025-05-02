@@ -1,3 +1,12 @@
+/*
+    Newclock
+    ui/progress_bar.h
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #pragma once
 
 #include <stdint.h>

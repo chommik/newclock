@@ -1,3 +1,12 @@
+/*
+    Newclock
+    tasks/button_handling.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include "button_handling.h"
 
 #include <driver/gpio.h>

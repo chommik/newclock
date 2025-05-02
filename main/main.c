@@ -1,11 +1,11 @@
-/* Blink Example
+/*
+    Newclock main.c
 
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
+    Copyright (c) 2025 Rafal Macyszyn
 
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
+    SPDX-License-Identifier: BSD-3-Clause
 */
+
 #include "freertos/idf_additions.h"
 #include <driver/gpio.h>
 #include <driver/ledc.h>

@@ -1,3 +1,13 @@
+/*
+    Newclock
+    u8g2_adapter/u8g2_d_st7920_esp32.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    Original design from u8g2 library by olikraus@gmail.com in sys/tga/common/u8x8_d_tga.c.
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
 
 #include "u8g2_d_st7920_esp32.h"
 
@@ -48,7 +58,6 @@ uint8_t u8x8_d_st7920_128x64_esp32(u8x8_t *u8g2, uint8_t msg, uint8_t arg_int, v
       break;
     case U8X8_MSG_DISPLAY_INIT:
       u8x8_d_helper_display_init(u8g2);
-      //   tga_init(DEFAULT_WIDTH, DEFAULT_HEIGHT);
       break;
     case U8X8_MSG_DISPLAY_SET_POWER_SAVE:
       break;
@@ -81,37 +90,7 @@ uint8_t u8x8_d_st7920_128x64_esp32(u8x8_t *u8g2, uint8_t msg, uint8_t arg_int, v
               g_display->framebuffer[framebuffer_offset] |= fb_bit_select_mask;
           }
         }
-
-        // for (uint8_t row_counter = 0; row_counter < 8; row_counter++) {
-        //   size_t framebuffer_offset = 16 * (row_counter + 8 * tile->y_pos) + tile_counter;
-        //   size_t tile_ptr_offset = row_counter;
-        //   g_display->framebuffer[framebuffer_offset] = current_tile_ptr[tile_ptr_offset];
-        // }
       }
-
-      // uint8_t constant_offset = (tile->x_pos * u8g2->display_info->tile_width) / 8;
-
-      // for (uint8_t l_tile_offset = 0; l_tile_offset < tile->cnt; l_tile_offset++) {
-      //   uint8_t *l_src_tile_ptr = l_tile->tile_ptr + l_tile_offset;
-      // }
-
-      // x = ((u8x8_tile_t *)arg_ptr)->x_pos;
-      // // printf("U8X8_MSG_DISPLAY_DRAW_TILE x=%d, ", x);
-      // x *= 8;
-      // x += u8g2->x_offset;
-
-      // y = ((u8x8_tile_t *)arg_ptr)->y_pos;
-      // // printf("y=%d, c=%d\n", y, ((u8x8_tile_t *)arg_ptr)->cnt);
-      // y *= 8;
-
-      // do {
-      //   c = ((u8x8_tile_t *)arg_ptr)->cnt;
-      //   ptr = ((u8x8_tile_t *)arg_ptr)->tile_ptr;
-      //   tga_set_multiple_8pixel(x, y, c * 8, ptr);
-
-      //   arg_int--;
-      // } while (arg_int > 0);
-
       break;
     default:
       return 0;

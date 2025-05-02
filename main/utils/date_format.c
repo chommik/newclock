@@ -1,3 +1,12 @@
+/*
+    Newclock
+    utils/date_format.c
+
+    Copyright (c) 2025 Rafal Macyszyn
+
+    SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <stdio.h>
 
 #include "utils.h"
